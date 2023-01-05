@@ -34,7 +34,7 @@ public class HelloControllerTeste {
 		
 	}
 
-	@GetMapping
+	@GetMapping("/teste")
 	public String hello() {
     	return "Hello world HOSTINGER YOUR SUCK, Again, and, one more thing !";
 	}
