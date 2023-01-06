@@ -18,12 +18,11 @@ import util.SendEmailCotacao;
 
 
 @RestController
-@RequestMapping(value ="/hello")
+@RequestMapping(value ="/")
 public class HelloControllerTeste {
 	
 	
-	
-	@GetMapping
+	@GetMapping("/pegar")
 	public Moeda teste(@RequestParam("moeda") String moeda, @RequestParam("emailPara") String emailPara) throws JsonMappingException, JsonProcessingException {
 		
 		SendEmailCotacao send = new SendEmailCotacao();
@@ -34,7 +33,7 @@ public class HelloControllerTeste {
 		
 	}
 
-	@GetMapping("/teste")
+	@GetMapping()
 	public String hello() {
     	return "Hello world HOSTINGER YOUR SUCK, Again, and, one more thing !";
 	}
