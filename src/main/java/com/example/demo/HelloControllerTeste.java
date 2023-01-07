@@ -18,7 +18,7 @@ import util.SendEmailCotacao;
 
 
 @RestController
-@RequestMapping(value ="/")
+@RequestMapping(value ="/hello")
 public class HelloControllerTeste {
 	
 	
