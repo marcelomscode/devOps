@@ -14,6 +14,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import model.Feedback;
 import model.Moeda;
 import model.Propriedades;
+import model.Quadros;
 import util.SendEmailCotacao;
 
 
@@ -35,8 +36,10 @@ public class HelloControllerTeste {
 
 	@GetMapping()
 	public String hello() {
-    	return "Hello world HOSTINGER YOUR SUCK, Again, and, one more thing !";
+		Quadros q = new Quadros();
+		q.setDiaFechamento(10);
+		q.setNome("ITAU CLICK");
+    	return q.getNome();
 	}
-	
 	
 }
