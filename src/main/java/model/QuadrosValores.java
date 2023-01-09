@@ -3,9 +3,19 @@ package model;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="valores")
 public class QuadrosValores {
 
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String descricao;
 	private Date vencimento;
@@ -13,6 +23,8 @@ public class QuadrosValores {
 	private BigDecimal valor;
 	private boolean pago;
 	
+	@ManyToOne
+	@JoinColumn(name="quadrosValores_id")
 	private Quadros quadros;
 
 	public long getId() {
