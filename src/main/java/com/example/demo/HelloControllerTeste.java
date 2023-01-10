@@ -13,7 +13,7 @@ import com.example.demo.repositories.QuadrosValoresRepository;
 
 
 @RestController
-@RequestMapping(value ="/hello")
+@RequestMapping(value ="/api")
 public class HelloControllerTeste {
 	
     @Autowired QuadrosRepository quadrosRepository;
